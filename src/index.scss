@@ -1,0 +1,71 @@
+:root {
+  font-family: Inter, Avenir, Helvetica, Arial, sans-serif;
+  font-size: 16px;
+  line-height: 1;
+  font-weight: 500;
+
+  font-synthesis: none;
+  text-rendering: optimizeLegibility;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  -webkit-text-size-adjust: 100%;
+
+  --black: #161617;
+  --black2: #171818;
+  --black3: #0c0c0d;
+  --black-lighter: #575859;
+  --black-light: #4e5359;
+  --pink: #f87800;
+  --orange: #f87800;
+  --gradient: linear-gradient(98.37deg, #f87800 100%, #f87800 100%);
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  // The "border-box" box model includes the element's border and padding
+  // within its specified width and height, rather than adding them to the width and height.
+  box-sizing: border-box;
+}
+
+body {
+  background-color: var(--black);
+}
+
+//::-webkit-scrollbar is a pseudo-element selector that targets the scrollbar of an element specifically in webkit-based browsers (such as Chrome or Safari). It allows you to style the appearance of the scrollbar.
+::-webkit-scrollbar {
+  //removing the scrollbar frm the side( just the ui..scollbar fucntionality obvisoulay still works)
+  display: none;
+}
+
+//ui to show when items are loading from api call ( used in carousel component
+.skeleton {
+  position: relative;
+  overflow: hidden;
+  background-color: #303032;
+  &::after {
+    position: absolute;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    left: 0;
+
+    transform: translateX(-100%);
+    background-image: linear-gradient(
+      90deg,
+      rgba(#0c0c0d, 0) 0,
+      rgba(#0c0c0d, 0.2) 20%,
+      rgba(#0c0c0d, 0.5) 60%,
+      rgba(#0c0c0d, 0)
+    );
+    animation: shimmer 2s infinite;
+    content: "";
+  }
+
+  //keeps doing transfrom with shimmer effelc
+  @keyframes shimmer {
+    100% {
+      transform: translateX(100%);
+    }
+  }
+}

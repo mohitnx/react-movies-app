@@ -1,0 +1,39 @@
+@mixin sm {
+  @media only screen and (min-width: 640px) {
+    @content;
+  }
+}
+
+//In Sass, mixins are reusable pieces of code that can be included in other stylesheets. They allow you to define a set of CSS rules that can be easily reused and customized.
+//The @content directive is used to include the content within the mixin block wherever the mixin is used.
+@mixin md {
+  @media only screen and (min-width: 768px) {
+    @content;
+  }
+}
+
+@mixin lg {
+  @media only screen and (min-width: 1024px) {
+    @content;
+  }
+}
+
+@mixin xl {
+  @media only screen and (min-width: 1280px) {
+    @content;
+  }
+}
+
+@mixin xxl {
+  @media only screen and (min-width: 1536px) {
+    @content;
+  }
+}
+
+@mixin ellipsis($line: 2) {
+  display: -webkit-box;
+  -webkit-line-clamp: $line;
+  -webkit-box-orient: vertical;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}

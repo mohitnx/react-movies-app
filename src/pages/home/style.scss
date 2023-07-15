@@ -1,0 +1,19 @@
+.carouselSection {
+  position: relative;
+  margin-bottom: 70px;
+
+  // This selector targets direct child elements with
+  // the classname .contentWrapper (of both hero banner and trending seciton) within the .carouselSection container. It applies styles to the content wrapper element,
+  //which is expected to be a child element of the carousel section.
+  & > .contentWrapper {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    margin-bottom: 20px;
+  }
+  .carouselTitle {
+    font-size: 24px;
+    color: white;
+    font-weight: normal;
+  }
+}
