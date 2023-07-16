@@ -10,7 +10,7 @@ import useFetch from "../../hooks/useFetch";
 import DetailsBanner from "./detailsBanner/DetailsBanner";
 import Cast from "./cast/Cast";
 import VideosSection from "./videosSection/VideosSection";
-import Similarr from "./carousels/similar";
+import Similarr from "./carousels/Similarr";
 
 const Details = () => {
   //to extract mediaType and id from teh url
