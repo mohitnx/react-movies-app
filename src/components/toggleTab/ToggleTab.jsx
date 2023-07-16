@@ -20,7 +20,6 @@ export const ToggleTab = () => {
   const handleOptionClick = (option) => {
     setSelectedOption(option);
     localStorage.setItem("mode", option);
-    // ...
   };
 
   useEffect(() => {
