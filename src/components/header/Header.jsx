@@ -10,6 +10,7 @@ import { VscChromeClose } from "react-icons/vsc";
 import "./style.scss";
 
 import ContentWrapper from "../contentWrapper/ContentWrapper";
+import { ToggleTab } from "../toggleTab/ToggleTab";
 
 const Header = () => {
   //to control the scrolling effect of header
@@ -106,6 +107,9 @@ const Header = () => {
           <span className="logoText">MovieOnline</span>
         </div>
         <ul className="menuItems">
+          <li className="menuItem">
+            <ToggleTab />
+          </li>
           <li className="menuItem" onClick={() => navigationHandler("movie")}>
             Movies
           </li>

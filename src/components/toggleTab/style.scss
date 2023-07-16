@@ -1,0 +1,25 @@
+.toggle-menu-container {
+  background-color: whitesmoke;
+  width: 140px;
+  height: 40px;
+  border-radius: 20px;
+  padding: 10px 12px;
+  position: relative;
+}
+.option-container {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+}
+.option {
+  z-index: 2;
+  color: black;
+}
+.selected {
+  top: 3px;
+  left: 4px;
+  background-color: orange;
+  width: 50%;
+  border-radius: 20px;
+  height: 33px;
+}
