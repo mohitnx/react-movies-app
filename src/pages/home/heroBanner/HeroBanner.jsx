@@ -33,6 +33,12 @@ export const HeroBanner = () => {
     console.log(bg);
   }, [data]);
 
+  const searchQueryHandlersearch = () => {
+    if (query.length > 0) {
+      navigate(`/search/${query}`);
+    }
+  };
+
   const searchQueryHandler = (event) => {
     if (event.key === "Enter" && query.length > 0) {
       navigate(`/search/${query}`);
@@ -65,7 +71,7 @@ export const HeroBanner = () => {
               //if not empty and enter pressedn then navigate is triggered
               onKeyUp={searchQueryHandler}
             ></input>
-            <button>Search</button>
+            <button onClick={searchQueryHandlersearch}>Search</button>
           </div>
         </div>
       </ContentWrapper>
